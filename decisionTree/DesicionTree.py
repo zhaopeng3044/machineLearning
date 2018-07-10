@@ -47,6 +47,11 @@ def splitDataSet(dataSet, axis, value):
 
 
 def chooseBestFeatureToSplit(dataSet):
+    '''
+    选择出当前数据集信息增益最大的特征
+    :param dataSet: 数据集
+    :return: 信息增益最大的特征列索引
+    '''
     numFeatures = len(dataSet[0]) - 1
     baseEntropy = calcShannonEnt(dataSet)
 
@@ -85,6 +90,12 @@ def majorityCnt(classList):
 
 
 def creatTree(dataSet, labels):
+    '''
+    决策树生成算法
+    :param dataSet: 数据集合
+    :param labels: 特征列的名称
+    :return: 返回决策树
+    '''
     classList = [example[-1] for example in dataSet]
     # 样本中的label为一种分类,直接返回
     if classList.count(classList[0]) == len(dataSet):
