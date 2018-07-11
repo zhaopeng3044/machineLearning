@@ -50,7 +50,7 @@ def chooseBestFeatureToSplit(dataSet):
     '''
     选择出当前数据集信息增益最大的特征
     :param dataSet: 数据集
-    :return: 信息增益最大的特征列索引
+    :return: 信息增益最大的特征列索引t
     '''
     numFeatures = len(dataSet[0]) - 1
     baseEntropy = calcShannonEnt(dataSet)
